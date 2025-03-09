@@ -1,6 +1,7 @@
 import React from "react"
+import { ThemeProvider } from "@/components/ThemeProvider"
 import "./globals.css"
-import '@fontsource-variable/bricolage-grotesque'
+import "@fontsource-variable/bricolage-grotesque"
 
 export default function RootLayout({
   children,
@@ -8,9 +9,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

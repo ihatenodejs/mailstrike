@@ -25,7 +25,7 @@ export default function Sidebar() {
       <SidebarHeader>
         <div className="flex justify-center items-center mt-4">
           <TbMail size={24} className="mr-2" />
-          <h1 className="text-2xl font-bold text-gray-800">MailStrike</h1>
+          <h1 className="text-2xl font-bold text-foreground">MailStrike</h1>
         </div>
       </SidebarHeader>
       <SidebarContent>
